@@ -282,7 +282,7 @@ void render_hw7()
 		"	//specular\n"
 		"	vec3 viewDir = normalize(viewPos - in_fs.FragPos);\n"
 		"	vec3 halfwayDir = normalize(lightDir + viewDir);\n"
-		"	float spec = pow(max(dot(viewDir, halfwayDir), 0.0f), 64.0f);\n"
+		"	float spec = pow(max(dot(normal, halfwayDir), 0.0f), 64.0f);\n"
 		"	vec3 specular = spec * light.specular;\n"
 		"	// add shadow \n"
 		"	float shadow = ShadowCalculation(in_fs.FragPosLightSpace);\n"
